@@ -1,0 +1,5 @@
+java sample.prog.Program
+
+java -cp hello.jar sample.prog.Program
+
+java -jar hello.jar

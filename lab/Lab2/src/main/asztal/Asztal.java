@@ -32,7 +32,7 @@ public class Asztal {
 	}
 
 	public void emel(double d) {
-
+		tet += d;
 	}
 
 	public void kor() {

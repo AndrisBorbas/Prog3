@@ -6,9 +6,9 @@ import main.jatekos.*;
 public class Main {
 	public static void main(String[] args) {
 		Asztal asztal = new Asztal();
-		Jatekos jatekos1 = new Jatekos();
-		Jatekos jatekos2 = new Jatekos();
-		Jatekos jatekos3 = new Jatekos();
+		Kezdo jatekos1 = new Kezdo();
+		Robot jatekos2 = new Robot();
+		Kezdo jatekos3 = new Kezdo();
 
 		asztal.addJatekos(jatekos1);
 		asztal.addJatekos(jatekos2);

@@ -1,5 +1,6 @@
 package main.asztal;
 
+import main.exception.NincsJatekos;
 import main.jatekos.Jatekos;
 
 public class Asztal {
@@ -35,7 +36,10 @@ public class Asztal {
 		tet += d;
 	}
 
-	public void kor() {
+	public void kor() throws NincsJatekos {
+		if (jatekosok.length == 0) {
+			throw new NincsJatekos("asd");
+		}
 		for (int i = 0; i < jatekosok.length; i++) {
 			jatekosok[i].lep();
 		}

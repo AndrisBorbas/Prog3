@@ -19,4 +19,7 @@ public abstract class Jatekos {
 		asztal = a;
 	}
 
+	public void finalize(){
+		System.out.println(this.toString());
+	}
 }

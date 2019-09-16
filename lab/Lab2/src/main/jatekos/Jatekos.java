@@ -2,12 +2,12 @@ package main.jatekos;
 
 import main.asztal.Asztal;
 
-public class Jatekos {
+public abstract class Jatekos {
 	protected Asztal asztal;
 	static int id;
 	final int currentID;
 
-	protected Jatekos() {
+	public Jatekos() {
 		currentID = ++id;
 	}
 

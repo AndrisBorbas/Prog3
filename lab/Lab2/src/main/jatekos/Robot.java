@@ -1,6 +1,7 @@
 package main.jatekos;
 
 public class Robot extends Jatekos {
+	
 	public void lep() {
 		System.out.println(toString() + " Kör: " + String.valueOf(super.asztal.getKor()));
 
@@ -9,6 +10,6 @@ public class Robot extends Jatekos {
 	public String toString() {
 		String temp = super.toString();
 		temp = temp.concat(" id: ");
-		return temp.concat(String.valueOf(super.id));
+		return temp.concat(String.valueOf(super.currentID));
 	}
 }

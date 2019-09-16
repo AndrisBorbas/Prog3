@@ -7,7 +7,7 @@ public class Jatekos {
 	static int id;
 	final int currentID;
 
-	public Jatekos() {
+	protected Jatekos() {
 		currentID = ++id;
 	}
 

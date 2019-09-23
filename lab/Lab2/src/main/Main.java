@@ -29,7 +29,7 @@ public class Main {
 		} catch (NincsJatekos e) {
 			System.out.println("retard");
 		} finally {
-			// Exit(0);
+			System.exit(0);
 		}
 	}
 }

@@ -20,14 +20,20 @@ public class BeerRegister {
 			if (temp[0].equals("add") && temp.length == 4) {
 				beerList.add(temp);
 			}
-			if (temp[0].equals("list")) {
-				beerList.list();
+			if (temp[0].equals("list") && temp.length == 2) {
+				beerList.list(temp[1]);
+			}
+			if (temp[0].equals("list") && temp.length == 1) {
+				beerList.list("unordered");
 			}
 			if (temp[0].equals("save") && temp.length == 2) {
 				beerList.save(temp[1]);
 			}
 			if (temp[0].equals("load") && temp.length == 2) {
 				beerList.load(temp[1]);
+			}
+			if (temp[0].equals("delete") && temp.length == 2) {
+				beerList.delete(temp[1]);
 			}
 		}
 	}

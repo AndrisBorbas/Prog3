@@ -82,6 +82,7 @@ public class BList {
 	}
 
 	public void delete(String beer) {
+		Collections.sort(beerList, cname);
 		int index = Collections.binarySearch(beerList, new Beer(beer, "", "0"), cname);
 		beerList.remove(index);
 	}

@@ -33,8 +33,6 @@ public class Test {
 				}
 				if (ss[0].equals("clear")) {
 					pq.clear();
-				}else {
-					System.out.println("Error - Wrong Command");
 				}
 
 			}

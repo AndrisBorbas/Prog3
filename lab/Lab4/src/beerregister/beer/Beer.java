@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Beer implements Serializable {
 
 	private String name, style, strength;

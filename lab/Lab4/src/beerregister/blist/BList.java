@@ -13,7 +13,7 @@ import beerregister.beer.Beer;
 
 public class BList {
 
-	public ArrayList<Beer> beerList;
+	public Beer[] beerList;
 
 	public static final Comparator<Beer> cname = new CompareName();
 	public static final Comparator<Beer> cstyle = new compareStyle();
@@ -38,15 +38,21 @@ public class BList {
 	}
 
 	public BList() {
-		beerList = new ArrayList<Beer>();
+		beerList = new Beer[10];
+		try {
+			save("asd");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void add(String[] beer) {
-		beerList.add(new Beer(beer[1], beer[2], beer[3]));
+		//beerList.add(new Beer(beer[1], beer[2], beer[3]));
 	}
 
 	public void list(String cmd) {
-		if (cmd.equalsIgnoreCase("name")) {
+	/*	if (cmd.equalsIgnoreCase("name")) {
 			Collections.sort(beerList, cname);
 		}
 		if (cmd.equalsIgnoreCase("style")) {
@@ -57,18 +63,18 @@ public class BList {
 		}
 		for (Beer beer : beerList) {
 			beer.list();
-		}
+		}*/
 	}
 
 	public void save(String file) throws IOException {
 		FileWriter fw = new FileWriter((System.getProperty("user.dir")) + "/" + file + ".txt");
 		BufferedWriter bw = new BufferedWriter(fw);
 		for (Beer beer : beerList) {
-			beer.save(bw);
+			beer.list();
 		}
 		bw.close();
 	}
-
+/*
 	public void load(String file) throws IOException {
 		String line = null;
 		FileReader fr = new FileReader((System.getProperty("user.dir")) + "/" + file + ".txt");
@@ -86,5 +92,5 @@ public class BList {
 		int index = Collections.binarySearch(beerList, new Beer(beer, "", "0"), cname);
 		beerList.remove(index);
 	}
-
+*/
 }

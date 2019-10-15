@@ -10,7 +10,7 @@ public class Fifo {
 	}
 
 	public synchronized void put(String s) throws InterruptedException {
-		// System.out.println("put: " + Thread.currentThread());
+		System.out.println("put: " + Thread.currentThread());
 		while (list.size() >= 10) {
 			this.wait();
 		}
@@ -22,7 +22,7 @@ public class Fifo {
 	}
 
 	public synchronized String get() throws InterruptedException {
-		// System.out.println("get: " + Thread.currentThread());
+		System.out.println("get: " + Thread.currentThread());
 		while (list.size() <= 0) {
 			this.wait();
 		}

@@ -1,6 +1,6 @@
 package lab5;
 
-public class Producer extends Thread {
+public class Producer implements Runnable {
 
 	String s;
 	Fifo f;
@@ -19,7 +19,7 @@ public class Producer extends Thread {
 			// Long.toString(System.currentTimeMillis())
 			// .substring(Long.toString(System.currentTimeMillis()).length() - 5));
 			f.put(s + " " + i++);
-			n += (n * 0.5);
+			//n += (n * 0.5);
 			Thread.sleep(n);
 		}
 	}

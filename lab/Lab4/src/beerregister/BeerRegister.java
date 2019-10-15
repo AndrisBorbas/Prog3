@@ -11,7 +11,7 @@ public class BeerRegister {
 	public static void main(String[] args) throws IOException {
 		BList beerList = new BList();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+/*
 		while (true) {
 			String s = reader.readLine();
 
@@ -36,6 +36,8 @@ public class BeerRegister {
 				beerList.delete(temp[1]);
 			}
 		}
+		*/
+		
 	}
 
 }
